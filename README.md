@@ -15,6 +15,8 @@ source 'https://cdn.cocoapods.org/'
 
 Keep both lines. CocoaPods takes a pod from the first source that has it, so this repo must come first. Your other pods still come from the CocoaPods CDN, and once a Podfile has a `source` line, CocoaPods no longer adds the CDN by itself.
 
+Versions released before 2 December 2026 are in both sources, so `pod install` can print `Found multiple specifications` for Primer pods. This is expected. CocoaPods uses this repo, because it comes first.
+
 ## What is in it
 
 Every published version of these pods:
