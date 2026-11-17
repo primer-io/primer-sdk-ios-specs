@@ -29,3 +29,5 @@ Versions released before 2 December 2026 were copied from Trunk with `scripts/ba
 ## Publishing
 
 The release jobs of primer-sdk-ios and the wrapper repos push here with `pod repo push primer-sdk-ios-specs --use-json`. They get write access through the `SPEC_REPO_TOKEN` CI variable. Do not edit published specs by hand.
+
+`scripts/check_specs.py` runs on every pull request and every push to `main`. It fails when a published spec changes or is deleted, or when a new spec does not point to a tag in a Primer repo.
